@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--The request a tutorial page for my Webpage!-->
+<html>
+    <head>
+        <title>Request a tutorial for me to demonstrate.</title>
+    </head>
+    <body>
+        <h1>To request something for me to demonstrate, use the form below!</h1>
+        <p>To return home, <a href="index.html">Click Here!</a></p>
+        <p>To view Frequenctly Asked Questions, <a href="faq.html">Click here!</a></p> <!--Lead the user to the FAQ-->
+        <form>
+        <p>What gamemode is this request for?</p>
+        <!--Radio form for Gamemode-->
+            <input type="radio" id="Standard" name="Mode" value="Standard">
+            <label for="Standard">Standard</label><br>
+            <input type="radio" id="Mania" name="Mode" value="Mania">
+            <label for="Mania">Mania</label><br>
+            <input type="radio" id="Taiko" name="Mode" value="Taiko">
+            <label for="Taiko">Taiko</label><br>
+            <input type="radio" id="Catch" name="Mode" value="Catch">
+            <label for="Catch">Catch the Beat</label><br>
+            <input type="radio" id="None" name="Mode" value="None">
+            <label for="None">None of the above</label><br>
+            <!--Checkbox form for Request Type-->
+            <p>Which type of tutorial does your request pertain to? You can select more than one.</p>
+            <input type="checkbox" id="Software" name="Software" value="Software">
+            <label for="Software">Software Tutorial</label><br>
+            <input type="checkbox" id="Hardware" name="Hardware" value="Hardware">
+            <label for="Hardware">Hardware Tutorial</label><br>
+            <input type="checkbox" id="Gameplay" name="Gameplay" value="Gameplay">
+            <label for="Gameplay">Gameplay Tutorial</label><br><br>
+            <!--Dropdown form for input device-->
+            <label for="Device">Which of the following input device combinations do you use to play osu!?</label><br>
+            <select id="Device" name="Device">
+                <option value="Keyboard_and_Mouse">Keyboard and Mouse</option>
+                <option value="Keyboard_and_Tablet">Keyboard and Tablet</option>
+                <option value="Keyboard_and_Track">Keyboard and Trackpad</option>
+                <option value="Mouse">Mouse only</option>
+                <option value="Tablet">Tablet only</option>
+            </select><br><br>
+            <!--Textarea form for details on request-->
+            <label for="Request">Please enter the specifics of your request (3000 characters).</label><br>  
+            <textarea name="Request" id="Request" rows="10" cols="80" maxlength="240" required>            
+            </textarea><br><br>
+            <!--URL form for link to software or hardware using Regex -->
+            <label for="software_link">Link to the software or hardware.</label><br>
+            <input type="url" id="software_link" name="Software_link" pattern="https?://.+" title="Include http://"><br><br> <!--Regex taken from www.w3schools.com/tags/att_input_pattern.asp--> 
+            <input type="submit"/>
+        </form>
+    </body>
+</html>
