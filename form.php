@@ -6,8 +6,9 @@
     </head>
     <body>
         <p>To return to the main page, <a href="index.html">Click here!</a></p>
-        <p><?= var_dump($_SERVER) ?></p>
-        <h1>User-Agent String:</h1>
-        <p>Your User-Agent string is: </br><?= $_SERVER["HTTP_USER_AGENT"] ?><p>
+        <h1>Dump of $_GET</h1>
+        <p><?= var_dump($_GET) ?></p>
+        <h2>Dump of $_POST</h2>
+        <p><?= var_dump($_POST) ?></p>
     </body>
 </html>
