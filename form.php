@@ -15,9 +15,11 @@
         <div style=background-color:#D3D3D3>
         <ul>
                 <li>Mode: <?=$_POST["Mode"];?></li> 
-                <li>Tutorial Type: <?=if(isset($_POST["Software"])){
-                    echo "Software"
-                };?></li>
+                <li>Tutorial Type: <?php
+                                    if(isset($_POST["Software"])){
+                                        echo "Software"
+                                    }
+                                    ?></li>
                 <li>Playstyle: <?=$_POST["Device"];?></li>
                 <li>Additional Details: <?=$_POST["Request"];?></li>
                 <li>Playstyle: <?=$_POST["Device"];?></li>
