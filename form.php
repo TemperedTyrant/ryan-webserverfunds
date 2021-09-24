@@ -16,10 +16,13 @@
         <ul>
                 <li>Mode: <?=$_POST["Mode"];?></li> 
                 <li>Tutorial Type: <?php
-                                    if(isset($_POST["Software"])){
-                                        echo "Software"
+                                    if(isset($_POST["Hardware"])){
+                                    echo "Hardware";
                                     }
-                                    ?></li>
+                                    if(isset($_POST["Software"])){
+                                    echo "Software";
+                                    }
+                                    ?></li>  
                 <li>Playstyle: <?=$_POST["Device"];?></li>
                 <li>Additional Details: <?=$_POST["Request"];?></li>
                 <li>Playstyle: <?=$_POST["Device"];?></li>
