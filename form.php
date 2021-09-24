@@ -14,8 +14,10 @@
         <h2>Here are the results of your form!</h2>
         <div style=background-color:#D3D3D3>
         <ul>
-                <li>Mode: <?=$_POST["mode"];?></li> 
-                <li></li>
+                <li>Mode: <?=$_POST["Mode"];?></li> 
+                <li>Tutorial Type: <?=if(isset($_POST["Software"])){
+                    echo "Software"
+                };?></li>
                 <li>Playstyle: <?=$_POST["Device"];?></li>
                 <li>Additional Details: <?=$_POST["Request"];?></li>
                 <li>Playstyle: <?=$_POST["Device"];?></li>
