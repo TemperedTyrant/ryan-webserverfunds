@@ -7,6 +7,6 @@
     <body>
         <p>To return to the main page, <a href="index.html">Click here!</a></p>
         <p><?= var_dump($_SERVER) ?></p>
-        <h1>User-Agent Strint:</h1>
-        <p>Your User-Agent string is: <?php echo "$_HTTP_USER_AGENT";?><p>
+        <h1>User-Agent String:</h1>
+        <p>Your User-Agent string is: <?php echo "$HTTP_USER_AGENT";?><p>
 </html>
