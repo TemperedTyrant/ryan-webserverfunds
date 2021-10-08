@@ -31,7 +31,7 @@
                 <li>Link: <?=$_POST["Software_link"];?></li>
             </ul>        
         </div>
-        <p>Here are the results from table requests in database ryan_info</p>                            
+        <h2>Here are the results from table requests in database ryan_info</h2>                            
         <?php 
         $servername = "localhost";
         $username = "ryan";
