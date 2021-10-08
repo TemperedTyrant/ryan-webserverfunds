@@ -4,6 +4,8 @@
     <head>
         <title>Welcome to my first PHP Webpage for Fundamentals of Web Servers!</title>
     </head>
+
+
     <body>
         <p>To return to the main page, <a href="index.html">Click here!</a></p>
         <h1>Dump of $_GET</h1>
@@ -31,6 +33,8 @@
                 <li>Link: <?=$_POST["Software_link"];?></li>
             </ul>        
         </div>
+
+
         <h2>Here are the results from table 'requests' in database 'ryan_info'</h2>                            
         <?php 
         $servername = "localhost";
@@ -57,6 +61,23 @@
         }
 
         mysqli_close($conn);
-        ?>
+       ?>
+
+        <?php 
+        $servername = "localhost";
+        $username = "ryan";
+        $password = "Class!23";
+        $dbname = "ryan_info";
+        //Create Connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        //Check Connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        //Update data in request_id 1
+        $sql = "UPDATE requests (type, mode, device) set type = 'Default', type = 'Default', device = 'Default' where request_id = '1'";
+        $result = mysqli_query($conn, $sql);
+
     </body>
 </html>
