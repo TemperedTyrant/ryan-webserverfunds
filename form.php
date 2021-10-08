@@ -38,7 +38,7 @@
         $password = "Class!23";
         $dbname = "ryan_info";
         //Create Connection
-        $conn = mysqli_connect($servername, $dbname);
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
         //Check Connection
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
