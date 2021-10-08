@@ -76,8 +76,8 @@
         }
 
         //Update data in request_id 1
-        $sql = "UPDATE requests (type, mode, device) set type = 'Default', type = 'Default', device = 'Default' where request_id = '1'";
+        $sql = "UPDATE requests (type, mode, device) set type = 'Default', mode = 'Default', device = 'Default' where request_id = '1'";
         $result = mysqli_query($conn, $sql);
-
+        ?>
     </body>
 </html>
