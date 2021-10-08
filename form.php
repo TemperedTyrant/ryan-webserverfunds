@@ -46,11 +46,31 @@
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        //Update data in request_id 1
-        $sql = "UPDATE requests (type, mode, device) set type = 'Default', mode = 'Default', device = 'Default' where request_id = '1'";
+        //Update data in request_id 2
+        $sql = "UPDATE requests (type, mode, device) set type = 'Default', mode = 'Default', device = 'Default' where request_id = '2'";
         $result = mysqli_query($conn, $sql);
+
+        mysqli_close($conn);
         ?>
 
+        <?php 
+        $servername = "localhost";
+        $username = "ryan";
+        $password = "Class!23";
+        $dbname = "ryan_info";
+        //Create Connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        //Check Connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        //Insert data in requests
+        $sql = "INSERT INTO requests (type, mode, device) VALUES ('Hardware', 'Standard', 'Mouse Only')";
+        $result = mysqli_query($conn, $sql);
+        
+        mysqli_close($conn);
+        ?>
 
         <h2>Here are the results from table 'requests' in database 'ryan_info'</h2>                            
         <?php 
