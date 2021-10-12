@@ -37,7 +37,7 @@
                                         $type=$type . "Gameplay";
                                     }
                                     else {
-                                        $type=$type . "no Gameplay"
+                                        $type=$type . "no Gameplay";
                                     }
                                     ?></li>  
                 <li>Playstyle: <?=$_POST["Device"];?></li>
