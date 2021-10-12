@@ -9,6 +9,6 @@
         <p>You have requested <?=$_POST["Quantity"];?> <?=$_POST["product_name"];?>.<br></p>       
         <!-- Add ways to return to previous pages -->
         <p>Return to main page <a href="index.html">here.</a></p>
-        <p>Return to form page <a href="index.html">here.</a></p>
+        <p>Return to form page <a href="midterm.html">here.</a></p>
     </body>
 </html>

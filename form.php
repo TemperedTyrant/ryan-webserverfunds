@@ -20,12 +20,24 @@
                 <li>Tutorial Type: <?php
                                     if(isset($_POST["Software"])){
                                         echo "Software ";
+                                        $type="software;";
+                                    }
+                                    else {
+                                        $type= "no Software;"
                                     }
                                     if(isset($_POST["Hardware"])){
                                         echo "Hardware ";
+                                        $type=$type . "Hardware;";
+                                    }
+                                    else {
+                                        $type=$type . "no Hardware;";
                                     }
                                     if(isset($_POST["Gameplay"])){
                                         echo "Gameplay ";
+                                        $type=$type . "Gameplay";
+                                    }
+                                    else {
+                                        $type=$type . "no Gameplay"
                                     }
                                     ?></li>  
                 <li>Playstyle: <?=$_POST["Device"];?></li>
@@ -39,6 +51,10 @@
         $username = "ryan";
         $password = "Class!23";
         $dbname = "ryan_info";
+
+        $mode = $_POST["Mode"];
+        $device = $_POST["Device"];
+
         //Create Connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         //Check Connection
@@ -46,27 +62,7 @@
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        //Update data in request_id 2
-        $sql = "UPDATE requests (type, mode, device) set type = 'Default', mode = 'Default', device = 'Default' where request_id = '2'";
-        $result = mysqli_query($conn, $sql);
-
-        mysqli_close($conn);
-        ?>
-
-        <?php 
-        $servername = "localhost";
-        $username = "ryan";
-        $password = "Class!23";
-        $dbname = "ryan_info";
-        //Create Connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        //Check Connection
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-
-        //Insert data in requests
-        $sql = "INSERT INTO requests (type, mode, device) VALUES ('Hardware', 'Standard', 'Mouse Only')";
+        $sql = "INSERT INTO requests (type, mode, device) VALUES ('{$type}', '{$mode}', '{$device}')";
         $result = mysqli_query($conn, $sql);
         
         mysqli_close($conn);
