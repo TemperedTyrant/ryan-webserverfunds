@@ -16,7 +16,7 @@
         <h2>Here are the results of your form!</h2>
         <div style=background-color:#D3D3D3>
             <ul>
-                <li>Mode: <?=$_POST["Mode"];?></li> 
+                <li>Mode: <?=htmlspecialchars($_POST["Mode"]);?></li> 
                 <li>Tutorial Type: <?php
                                     if(isset($_POST["Software"])){
                                         echo "Software; ";
@@ -40,9 +40,9 @@
                                         $type=$type . "no Gameplay";
                                     }
                                     ?></li>  
-                <li>Playstyle: <?=$_POST["Device"];?></li>
-                <li>Additional Details: <?=$_POST["Request"];?></li>
-                <li>Link: <?=$_POST["Software_link"];?></li>
+                <li>Playstyle: <?=htmlspecialchars ($_POST["Device"]);?></li>
+                <li>Additional Details: <?=htmlspecialchars ($_POST["Request"]);?></li>
+                <li>Link: <?=htmlspecialchars ($_POST["Software_link"]);?></li>
             </ul>        
         </div>
 
@@ -52,8 +52,8 @@
         $password = "Class!23";
         $dbname = "ryan_info";
 
-        $mode = $_POST["Mode"];
-        $device = $_POST["Device"];
+        $mode = htmlspecialchars ($_POST["Mode"]);
+        $device = htmlspecialchars ($_POST["Device"]);
 
         //Create Connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
