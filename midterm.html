@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Midterm page for my website.</title>
+    </head>
+    <body>
+        <p>To return to the main page, <a href="index.html">Click here!</a></p> <!--Lead the user back home-->
+        <p>To view Frequently Asked Questions, <a href="faq.html">Click here!</a></p> <!--Lead the user to the FAQ-->
+        <form action="response.php" method="POST" required> <!--Use the POST method for form requests-->
+        <p>Select a product you wish to buy</p> <!--Ask the user what they want to buy-->
+        <!--Radio button form for Products-->
+        <input type="radio" id="masks" name="product_name" value="Masks">
+        <label for="masks">Masks</label><br>
+        <input type="radio" id="visors" name="product_name" value="Visors">
+        <label for="visors">Visors</label><br>
+        <input type="radio" id="gowns" name="product_name" value="Gowns">
+        <label for="gowns">Gowns</label><br><br>
+        <label for="num_items">Quantity: </label><br>
+        <input type="number" id="num_items" name="Quantity" required><br><br>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
