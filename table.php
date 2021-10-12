@@ -31,5 +31,6 @@
 
     mysqli_close($conn);   
     ?>
+    <p><br><br>To return home, <a href="index.html">Click Here!</a></p>
     </body>
 </html>
