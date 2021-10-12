@@ -1,22 +1,25 @@
 <!DOCTYPE html>
+<!-- Form submission page for Midterm 10/12/2021 -->
 <html>
     <head>
-        <title>Midterm page for my website.</title>
+        <title>Midterm page for my website.</title> <!-- Simple title -->
     </head>
     <body>
-        <p>To return to the main page, <a href="index.html">Click here!</a></p> <!--Lead the user back home-->
-        <p>To view Frequently Asked Questions, <a href="faq.html">Click here!</a></p> <!--Lead the user to the FAQ-->
-        <form action="response.php" method="POST"> <!--Use the POST method for form requests-->
-        <p>Select a product you wish to buy</p> <!--Ask the user what they want to buy-->
-        <!--Radio button form for Products-->
+        <p>To return to the main page, <a href="index.html">Click here!</a></p> <!-- Lead the user back home -->
+        <p>To view Frequently Asked Questions, <a href="faq.html">Click here!</a></p> <!-- Lead the user to the FAQ -->
+        <form action="response.php" method="POST"> <!-- Use the POST method for form requests and send data to resposne page -->
+        <p>Select a product you wish to buy</p> <!-- Ask the user what they want to buy -->
+        <!-- Radio button form for Products. Required -->
         <input type="radio" id="masks" name="product_name" value="Masks" required>
         <label for="masks">Masks</label><br>
         <input type="radio" id="visors" name="product_name" value="Visors" required>
         <label for="visors">Visors</label><br>
         <input type="radio" id="gowns" name="product_name" value="Gowns" required>
         <label for="gowns">Gowns</label><br><br>
+        <!-- Number text field. Required to purchase a certain qunatity -->
         <label for="num_items">Quantity: </label><br>
         <input type="number" id="num_items" name="Quantity" required><br><br>
+        <!-- Add a submission button -->
         <input type="submit"/>
         </form>
     </body>
