@@ -26,14 +26,14 @@
                                         $type= "no Software; ";
                                     }
                                     if(isset($_POST["Hardware"])){
-                                        echo "Hardware ";
+                                        echo "Hardware; ";
                                         $type=$type . "Hardware; ";
                                     }
                                     else {
                                         $type=$type . "no Hardware; ";
                                     }
                                     if(isset($_POST["Gameplay"])){
-                                        echo "Gameplay ";
+                                        echo "Gameplay";
                                         $type=$type . "Gameplay";
                                     }
                                     else {
