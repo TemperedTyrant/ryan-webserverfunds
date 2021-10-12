@@ -20,17 +20,17 @@
                 <li>Tutorial Type: <?php
                                     if(isset($_POST["Software"])){
                                         echo "Software ";
-                                        $type="software;";
+                                        $type="software ;";
                                     }
                                     else {
-                                        $type= "no Software;";
+                                        $type= "no Software ;";
                                     }
                                     if(isset($_POST["Hardware"])){
                                         echo "Hardware ";
-                                        $type=$type . "Hardware;";
+                                        $type=$type . "Hardware ;";
                                     }
                                     else {
-                                        $type=$type . "no Hardware;";
+                                        $type=$type . "no Hardware ;";
                                     }
                                     if(isset($_POST["Gameplay"])){
                                         echo "Gameplay ";
