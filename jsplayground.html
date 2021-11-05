@@ -6,7 +6,7 @@
     </head>
     <body>
         <p>Welcome to my JavaScript Playground. Here I will be using JavaScript according to Lab 10.</p>
-        <button onclick="window.alert('Secret Message')">Click Here for a Secret Message</button>
+        <button id="secMdg" onclick="window.alert('Secret Message');changeButton(this)">Click Here for a Secret Message</button>
         </br></br>
         <button id="myName" onclick=showName()&hideSecret()>Click here to see my name</button>
         </br>
@@ -28,11 +28,18 @@
                 document.getElementById("myName").style.display = "none";
             }
         </script>
-      <!--Script to hide the name button-->
+
+      <!--Script to change the src of an image-->
         <script>
-        function switchPic() {
-            document.getElementById("emoji").src = "images/hyper_thinking.png";
-        }
+            function switchPic() {
+                document.getElementById("emoji").src = "images/hyper_thinking.png";
+            }
+        </script>
+
+        <script>
+            function changeButton(elem) {
+                document.getElementById("secMsg")elem.innerHTML = "You saw the secret";     
+            }
         </script>
     </body>
 </html>
