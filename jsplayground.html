@@ -7,18 +7,33 @@
     <body>
         <p>Welcome to my JavaScript Playground. Here I will be using JavaScript according to Lab 10.</p>
         <button onclick="window.alert('Secret Message')">Click Here for a Secret Message</button>
-    </br></br>
+        </br></br>
         <button id="myName" onclick=showName()&hideSecret()>Click here to see my name</button>
+        </br></br>
+        <button id="changePic" onclick=switchPic()>Click here to change the emoji</button>
+        </br></br> 
+        <img id="emoji" src="images/thinking_small.png"/>
+      
+        <!--Script to insert my name into a <p> -->
         <script>
             function showName() {
                 document.getElementById("firstName").innerHTML = "Ryan";     
             }
         </script>
+      
+      <!--Script to hide the name button-->
         <script>
             function hideSecret() {
                 document.getElementById("myName").style.display = "none";
             }
         </script>
+      <!--Script to hide the name button-->
+        <script>
+        function switchPic() {
+            document.getElementById("emoji").src = "images/hyper_thinking.png";
+        }
+        </script>
+
         <p id="firstName"></p>
     </body>
 </html>
