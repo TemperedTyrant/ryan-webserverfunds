@@ -14,6 +14,12 @@
         <button id="changePic" onclick=switchPic()>Click here to change the emoji</button>
         </br></br> 
         <img id="emoji" src="images/thinking_small.png"/>
+        </br>
+        <form name="stepForm" onblur="sayRequired(this)">
+            <label for="exampleform">Simple text form for onBlur</label><br>  
+            <textarea name="exampleform" id="exampleform" rows="5" cols="40">            
+            </textarea><br><br>
+
       
         <!--Script to insert my name into a <p> -->
         <script>
@@ -35,10 +41,17 @@
                 document.getElementById("emoji").src = "images/hyper_thinking.png";
             }
         </script>
-
+        <!--Script to change the text of the first button-->
         <script>
             function changeButton(elem) {
-                document.getElementById("secMsg")elem.innerHTML = "You saw the secret";     
+                elem.innerHTML = "You saw the secret";    
+            }
+        </script>
+        
+        <!--Script to say that the text form is required-->
+        <script>
+            function sayRequired(elem) {
+                elem.innerHTML = "This field is required";
             }
         </script>
     </body>
