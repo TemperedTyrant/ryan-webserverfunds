@@ -8,10 +8,15 @@
         <p>Welcome to my JavaScript Playground. Here I will be using JavaScript according to Lab 10.</p>
         <button onclick="window.alert('Secret Message')">Click Here for a Secret Message</button>
     </br></br>
-        <button onclick=showName()>Click here to see my name</button></br></br>
+        <button id="secMsg" onclick=showName()&hideSecret>Click here to see my name</button></br></br>
         <script>
             function showName() {
                 document.getElementById("firstName").innerHTML = "Ryan";     
+            }
+        </script>
+        <script>
+            function hideSecret() {
+                document.getElementById("secMsg").style.display = "none";
             }
         </script>
         <p id="firstName"></p>
