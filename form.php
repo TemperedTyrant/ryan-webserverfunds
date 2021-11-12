@@ -15,6 +15,13 @@
         <!--Make user friendly-->
         <h2>Here are the results of your form!</h2>
         <div style=background-color:#D3D3D3>
+        <?php
+            if(isset($_POST['toggle'])) {
+                $output = `gpio toggle 0`;
+                $logic = `gpio read 0`;
+                echo "The LED logic level is $logic";
+            }
+        ?><br>
             <ul>
                 <li>Mode: <?=htmlspecialchars($_POST["Mode"]);?></li> 
                 <li>Tutorial Type: <?php
@@ -97,12 +104,6 @@
         mysqli_close($conn);
        ?>
 
-        <?php
-            if(isset($_POST['toggle'])) {
-                $output = `gpio toggle 0`;
-                $logic = `gpio read 0`;
-                echo "The LED logic level is $logic";
-            }
-        ?>
+
     </body>
 </html>
