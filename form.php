@@ -45,6 +45,13 @@
                 <li>Link: <?=htmlspecialchars ($_POST["Software_link"]);?></li>
             </ul>        
         </div>
+        <?php
+            if(isset($_POST['toggle'])) {
+                $output = `gpio toggle 0`;
+                $logic = `gpio read 0`;
+                echo "The LED logic level is $logic";
+            }
+        ?>
 
         <?php 
         $servername = "localhost";

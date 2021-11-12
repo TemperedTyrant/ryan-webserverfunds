@@ -58,9 +58,9 @@
         
         <?php
             if(isset($_POST['toggle'])) {
-                exec("gpio toggle 0");
-                exec("$logic = `gpio read 0`");
-                echo("State of LED is $logic");
+                $output = `gpio toggle 0`;
+                $logic = `gpio read 0`;
+                echo "The LED logic level is $logic";
             }
         ?>
 
