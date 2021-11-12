@@ -21,7 +21,17 @@
                 $logic = `gpio read 0`;
                 echo "The LED logic level is $logic";
             }
-        ?><br>
+        ?>
+        <?php
+            if(isset($_POST['stats'])) {
+                $raw = `./bme280`;
+                $deserialized = json_decode($raw);
+                echo "Temperature = $deserialized->tempereature";
+                echo "Temperature = $deserialized->pressure";
+                echo "Temperature = $deserialized->altitude";
+        }
+        ?>
+        <br>
             <ul>
                 <li>Mode: <?=htmlspecialchars($_POST["Mode"]);?></li> 
                 <li>Tutorial Type: <?php
