@@ -55,7 +55,7 @@
             }
         </script>
         <h1>Here are some uses of PHP for lab 11 with GPIO!</h1>
-        <form>
+        <form method="post">
             <input type="button" value="Toggle LED" id="toggle" name="toggle">
         </form>
 
