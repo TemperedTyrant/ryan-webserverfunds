@@ -65,7 +65,7 @@
         ?>
 
         <form method="POST" action="jsplayground.php">
-            <input type="button" value="Toggle LED" id="toggle" name="toggle">
+            <input type="submit" value="Toggle LED" id="toggle" name="toggle">
         </form>
     </body>
 </html>
