@@ -26,11 +26,9 @@
             if(isset($_POST['stats'])) {
                 $raw = `./bme280`;
                 $deserialized = json_decode($raw);
-                echo "Temperature = $deserialized->temperature";
-                <br>
-                echo "Pressure = $deserialized->pressure";
-                <br>
-                echo "Altitude = $deserialized->altitude";
+                echo "Temperature = $deserialized->temperature\n";           
+                echo "Pressure = $deserialized->pressure\n";
+                echo "Altitude = $deserialized->altitude\n";
         }
         ?>
         <br>
