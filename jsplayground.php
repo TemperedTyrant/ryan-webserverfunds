@@ -58,12 +58,12 @@
         <form>
             <input type="button" value="Toggle LED" id="toggle" name="toggle">
         </form>
-        
+
         <?php
             if(isset($_POST['toggle'])) {
                 $output = `gpio toggle 0`;
                 $logic = `gpio read 0`;
-                echo "The LED logic level is $logic"
+                echo "The LED logic level is $logic";
             }
         ?>
     </body>
