@@ -54,5 +54,17 @@
                 elem.innerHTML = "This field is required";
             }
         </script>
+        <h1>Here are some uses of PHP for lab 11 with GPIO!</h1>
+        <form>
+            <input type="button" value="Toggle LED" id="toggle" name="toggle">
+        </form>
+
+        <?php
+            if(isset($_POST['toggle'])) {
+                $output = `gpio toggle 0`;
+                $logic = `gpio read 0`;
+                echo "The LED logic level is $logic"
+            }
+        ?>
     </body>
 </html>
