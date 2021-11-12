@@ -55,10 +55,7 @@
             }
         </script>
         <h1>Here are some uses of PHP for lab 11 with GPIO!</h1>
-        <form method="post">
-            <input type="button" value="Toggle LED" id="toggle" name="toggle">
-        </form>
-
+        
         <?php
             if(isset($_POST['toggle'])) {
                 $output = `gpio toggle 0`;
@@ -66,5 +63,9 @@
                 echo "The LED logic level is $logic";
             }
         ?>
+
+        <form method="post">
+            <input type="button" value="Toggle LED" id="toggle" name="toggle">
+        </form>
     </body>
 </html>
