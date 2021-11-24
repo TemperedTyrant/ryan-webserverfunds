@@ -17,7 +17,7 @@
         </br>
         <form name="stepForm">
             <label for="exampleform">Simple text form for onBlur</label><br>
-            <p id="required" hidden>This is required!</p>  
+            <p id="required" hidden style="color: #FF0000">This is required!</p>  
             <textarea name="exampleform" id="exampleform" rows="5" cols="40" onblur="sayRequired()" onfocus="removeRequired()">            
             </textarea><br><br>
 
