@@ -18,7 +18,7 @@
         <form name="stepForm">
             <label for="exampleform">Simple text form for onBlur</label><br>
             <p id="required" hidden>This is required!</p>  
-            <textarea name="exampleform" id="exampleform" rows="5" cols="40" onblur="sayRequired()">            
+            <textarea name="exampleform" id="exampleform" rows="5" cols="40" onblur="sayRequired()" onfocus="removeRequired()">            
             </textarea><br><br>
 
       
@@ -60,6 +60,18 @@
             }
         }
         </script>
+
+        <script>
+        function removeRequired() {
+            var x = document.getElementById("required");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+            }
+        }
+        </script>
+
         <h1>Here are some uses of PHP for lab 11 with GPIO!</h1>
         
         <?php
