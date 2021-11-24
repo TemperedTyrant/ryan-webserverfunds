@@ -16,7 +16,7 @@
         <img id="emoji" src="images/thinking_small.png"/>
         </br>
         <form name="stepForm" onblur="sayRequired()">
-            <p id="required"></p>
+            <p id="required" hidden>This is required!</p>
             <label for="exampleform">Simple text form for onBlur</label><br>  
             <textarea name="exampleform" id="exampleform" rows="5" cols="40">            
             </textarea><br><br>
@@ -52,7 +52,7 @@
         <!--Script to say that the text form is required-->
         <script>
             function sayRequired() {
-                document.getElementById("required").innerHTML = "This field is required";
+                document.getElementById("required").removeATTR = "hidden";
             }
         </script>
         <h1>Here are some uses of PHP for lab 11 with GPIO!</h1>
