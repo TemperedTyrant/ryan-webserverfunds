@@ -51,9 +51,14 @@
         
         <!--Script to say that the text form is required-->
         <script>
-            function sayRequired() {
-                document.getElementById("required").removeAttribute = "hidden";
+        function sayRequired() {
+            var x = document.getElementById("required");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
             }
+        }
         </script>
         <h1>Here are some uses of PHP for lab 11 with GPIO!</h1>
         
