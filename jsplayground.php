@@ -16,9 +16,9 @@
         <img id="emoji" src="images/thinking_small.png"/>
         </br>
         <p id="required">This is required!</p>
-        <form name="stepForm" onblur="sayRequired()">
+        <form name="stepForm">
             <label for="exampleform">Simple text form for onBlur</label><br>  
-            <textarea name="exampleform" id="exampleform" rows="5" cols="40">            
+            <textarea name="exampleform" id="exampleform" rows="5" cols="40" onblur="sayRequired()">            
             </textarea><br><br>
 
       
