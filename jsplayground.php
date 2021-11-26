@@ -25,6 +25,21 @@
         <p>Request some info with AJAX!</p>
         <button type="button" onclick="readDoc()">Testing Hello World</button>
         <p id="hellow">Change me to Hello World!</p>
+
+        <button type="button" onclick="readVal()">Click to read the LED value</button>
+        <p id="pinval">Pin Value = ''</p>
+
+        <script>
+        function readVal() {
+            const xhttp = new XMLHttpRequest();
+            xmlhttp.onload = function() {
+                document.getElementById("pinval").innterHTML = this.responseText;
+            }
+            xmlhttp.open("GET", "readval.php?q=" + str);
+            xmlhttp.send();
+        }
+        </script>
+
         <!-- Script to read hello world using Ajax -->
         <script>
         function readDoc() {
