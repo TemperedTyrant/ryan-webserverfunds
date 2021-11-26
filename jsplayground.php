@@ -35,7 +35,7 @@
             }
             xhttp.open("GET", "helloworld.txt");
             xhttp.send();
-            }
+            
         }
         </script>
         <!--Script to insert my name into a <p> -->
