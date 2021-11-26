@@ -27,16 +27,16 @@
         <p id="hellow">Change me to Hello World!</p>
 
         <button type="button" onclick="readVal()">Click to read the LED value</button>
-        <p id="pinval">Pin Value = ''</p>
+        <p id="pinval">Pin Value = ' '</p>
 
         <script>
         function readVal() {
             const xhttp = new XMLHttpRequest();
-            xmlhttp.onload = function() {
+            xhttp.onload = function() {
                 document.getElementById("pinval").innterHTML = this.responseText;
             }
-            xmlhttp.open("GET", "readval.php?q=" + str);
-            xmlhttp.send();
+            xhttp.open("GET", "readval.php?q=");
+            xhttp.send();
         }
         </script>
 
