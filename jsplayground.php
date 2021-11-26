@@ -27,7 +27,7 @@
         <p id="hellow">Change me to Hello World!</p>
 
         <button type="button" onclick="readVal()">Click to read the LED value</button>
-        <p id="pinval">Pin Value = ' '</p>
+        <p id="pinval">Pin Value =</p>
 
         <script>
         function readVal() {
