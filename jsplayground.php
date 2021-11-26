@@ -20,8 +20,24 @@
             <p id="required" hidden style="color: #FF0000">This is required!</p>  
             <textarea name="exampleform" id="exampleform" rows="5" cols="40" onblur="sayRequired()" onfocus="removeRequired()">            
             </textarea><br><br>
-
-      
+        </form>
+        <!-- Ajax Portion -->
+        <p>Request some info with AJAX!</p>
+        <button type="button" onclick="readDoc()">Testing Hello World</button>
+        <p id="hellow">Change me to Hello World!</p>
+        <!-- Script to read hello world using Ajax -->
+        <script>
+        function readDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("hellow").innerHTML =
+                this.responseText;
+            }
+            xhttp.open("GET", "helloworld.txt");
+            xhttp.send();
+            }
+        }
+        </script>
         <!--Script to insert my name into a <p> -->
         <script>
             function showName() {
