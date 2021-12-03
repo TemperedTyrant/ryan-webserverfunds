@@ -35,7 +35,7 @@
             xhttp.onload = function() {
                 document.getElementById("pinval").innterHTML = this.responseText;
             }
-            xhttp.open("GET", "readval.php?q=");
+            xhttp.open("GET", "readval.php");
             xhttp.send();
         }
         </script>
