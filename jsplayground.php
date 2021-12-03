@@ -33,7 +33,7 @@
         function readVal() {
             const xhttp = new XMLHttpRequest();
             xhttp.onload = function() {
-                document.getElementById("pinval").innterHTML = this.responseText;
+                document.getElementById("pinval").innerHTML = this.responseText;
             }
             xhttp.open("GET", "readval.php");
             xhttp.send();
