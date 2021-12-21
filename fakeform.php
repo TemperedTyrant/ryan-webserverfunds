@@ -30,7 +30,8 @@
             $sql = "INSERT INTO finalexam (ipaddr, search) VALUES  ('{$_SERVER['REMOTE_ADDR']}', '{$search}')";
             $result = mysqli_query($conn, $sql);
 
-            header("location: " . $url, $search);
+            header("location: $url $search");
+             //. $url, $search);
         
             mysqli_close($conn);
         ?>
