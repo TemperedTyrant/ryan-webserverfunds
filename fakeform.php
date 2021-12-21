@@ -26,7 +26,7 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $sql = "INSERT INTO finalexam (ipaddr, search) VALUES  ('{$_SERVER['REMOTE_ADDR']}', '{$search}')";
+            $sql = "INSERT INTO finalexam (ipaddr, search) VALUES  ('{$_SERVER['REMOTE_ADDR']}', '{$Search}')";
             $result = mysqli_query($conn, $sql);
         
             mysqli_close($conn);
