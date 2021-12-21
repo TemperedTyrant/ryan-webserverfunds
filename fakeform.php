@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<!--My first PHP Page!-->
 <html>
     <head>
-        <title>Welcome to my first PHP Webpage for Fundamentals of Web Servers!</title>
+        <title>Page for Exam</title>
     </head>
     <body>
-        <ul>
-            <li>Search Term: <?=htmlspecialchars($_POST["Search"]);?></li>  
-        </ul>        
-        </div>
-
         <?php 
             $servername = "localhost";
             $username = "ryan";
@@ -35,16 +29,5 @@
         
             mysqli_close($conn);
         ?>
-
-        <?php
-            echo $_SERVER['REMOTE_ADDR'];
-        ?>
-        <?php
-            $val = array (
-            'weather' => 'Sunny',
-            'time' => '1:30 pm',
-            );
-            if(file_put_contents('file.txt', print_r($day, true))){
-                header("location: message.php");
-            }
-        ?>
+        </body>
+</html?
