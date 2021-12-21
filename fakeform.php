@@ -16,8 +16,7 @@
             $password = "Class!23";
             $dbname = "ryan_info";
 
-            $mode = htmlspecialchars ($_POST["Mode"]);
-            $device = htmlspecialchars ($_POST["Device"]);
+            $search = htmlspecialchars ($_POST["Search"]);
 
             //Create Connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -26,7 +25,7 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $sql = "INSERT INTO finalexam (ipaddr, search) VALUES  ('{$_SERVER['REMOTE_ADDR']}', '{$Search}')";
+            $sql = "INSERT INTO finalexam (ipaddr, search) VALUES  ('{$_SERVER['REMOTE_ADDR']}', '{$search}')";
             $result = mysqli_query($conn, $sql);
         
             mysqli_close($conn);
